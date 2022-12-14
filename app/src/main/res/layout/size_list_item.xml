@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sizeItemText"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:background="@drawable/second_btn"
+    android:gravity="center">
+
+</TextView>

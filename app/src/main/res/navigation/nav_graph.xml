@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.bam.shopproject.ui.PreviewFragment"
+        android:label="Начнем"
+        tools:layout="@layout/fragment_preview">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/navigation2"
+            app:popUpTo="@id/SecondFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <navigation android:id="@+id/navigation2"
+        app:startDestination="@id/SecondFragment">
+        <fragment
+            android:id="@+id/SecondFragment"
+            android:name="com.bam.shopproject.ui.SpinListFragment"
+            android:label="ВЫ можете купить"
+            tools:layout="@layout/fragment_main">
+            <action
+                android:id="@+id/action_SecondFragment_to_bootsAboutFragment"
+                app:destination="@id/bootsAboutFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/bootsAboutFragment"
+            android:name="com.bam.shopproject.ui.SpinAboutFragment"
+            android:label="О товаре" >
+            <argument
+                android:name="id"
+                app:argType="integer"
+                android:defaultValue="-1" />
+        </fragment>
+    </navigation>
+</navigation>
